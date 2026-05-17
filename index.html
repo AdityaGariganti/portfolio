@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+  ╔══════════════════════════════════════════════╗
+  ║  HOW TO EDIT THE BROWSER TAB TITLE          ║
+  ║  Change the text between <title> tags below ║
+  ╚══════════════════════════════════════════════╝
+  -->
+  <title>Aditya Srinidhi Gariganti — Data Analyst</title>
+
+  <!-- Google Fonts (free, loaded from internet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons (free, loaded from internet) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 1 — NAVBAR (top navigation bar)
+     ║
+     ║  HOW TO EDIT:
+     ║  1. Your logo/name → find "MGN" below, change to your initials
+     ║  2. Nav links text → change Home / About / Skills / Projects / Contact
+     ║     (but keep href="#about" etc. matching the section id="" values)
+     ║  3. "Hire Me" button → change text or remove the <a> tag
+     ═══════════════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+
+    <a href="#hero" class="nav-logo">
+      ASG<span>.</span>
+      <!-- ✏️ CHANGE "MGN" TO YOUR INITIALS -->
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#hero"     class="nav-item active">Home</a>
+      <a href="#about"    class="nav-item">About</a>
+      <a href="#experience" class="nav-item">Experience</a>
+      <a href="#skills"   class="nav-item">Skills</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#contact"  class="nav-item">Contact</a>
+      <!-- ✏️ CHANGE LINK TEXT IF NEEDED — but keep href="#..." matching section id -->
+    </nav>
+
+    <a href="#contact" class="btn btn-primary nav-hire">Hire Me</a>
+    <!-- ✏️ CHANGE "Hire Me" to whatever you want, or delete this line -->
+
+    <button class="burger" id="burger" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 2 — HERO (the big first screen people see)
+     ║
+     ║  HOW TO EDIT:
+     ║  1. Greeting line      → change "Hello, I'm"
+     ║  2. YOUR NAME          → change "Aditya Srinidhi Gariganti"
+     ║  3. Job title          → change "Data Analyst"
+     ║  4. Industry line      → change the industry/focus text
+     ║  5. Description        → change the paragraph text
+     ║  6. Download CV button → change href="images/cv.pdf" to your CV file
+     ║  7. Stats numbers      → change data-count="50" to your real numbers
+     ║  8. YOUR PHOTO         → put your photo in images/ folder named
+     ║                          profile.jpg  (or change the src below)
+     ║  9. Tool badges        → change SQL / Python / Tableau / Looker
+     ║                          to your own tools
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+
+  <!-- Decorative background elements (don't touch these) -->
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="hero-container">
+
+    <!-- ── LEFT SIDE: Text ── -->
+    <div class="hero-text">
+
+      <!-- Small top label -->
+      <div class="hero-label">
+        <span class="label-dot"></span>
+        <span>Available for Work</span>
+        <!-- ✏️ CHANGE: "Available for Work" / "Open to Freelance" / etc. -->
+      </div>
+
+      <!-- Greeting + Name -->
+      <h1 class="hero-name">
+        Hello, I'm<br>
+        <span class="name-accent">Aditya Srinidhi<br>Gariganti</span>
+        <!-- ✏️ CHANGE YOUR NAME HERE -->
+      </h1>
+
+      <!-- Job title (animated typing happens here — edit words in script.js) -->
+      <div class="hero-title-wrap">
+        <span class="title-prefix">I work as a </span>
+        <span class="title-typed" id="heroTyped"></span>
+        <span class="title-cursor">_</span>
+      </div>
+
+      <!-- Industry/focus line -->
+      <p class="hero-focus">
+        📊 Focus: <strong>Data Analysis, Visualization & Insights</strong>
+        <!-- ✏️ CHANGE: your industry / focus area -->
+      </p>
+
+      <!-- Description paragraph -->
+      <p class="hero-desc">
+        I turn complex data into clear stories that help businesses
+        make smarter decisions — using SQL, Python, Excel, and Power BI
+        to uncover insights, build dashboards, and drive real results.
+        <!-- ✏️ CHANGE: write your own description -->
+      </p>
+
+      <!-- Action buttons -->
+      <div class="hero-cta">
+        <a href="images/cv.pdf" download class="btn btn-primary">
+          <i class="fas fa-file-arrow-down"></i> Download CV
+          <!-- ✏️ CHANGE href: put your CV in the images/ folder, rename as cv.pdf -->
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          See My Projects <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <!-- <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Datasets<br>Analyzed</span>
+          <!-- ✏️ CHANGE: data-count="50" to your number, and label text 
+        </div>
+        <div class="stat-line"></div>
+        <div class="stat">
+          <span class="stat-n" data-count="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years<br>Experience</span>
+          <!-- ✏️ CHANGE: data-count to your years 
+        </div>
+        <div class="stat-line"></div>
+        <div class="stat">
+          <span class="stat-n" data-count="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects<br>Delivered</span>
+          <!-- ✏️ CHANGE: data-count to your number 
+        </div>
+      </div>-->
+
+    </div>
+
+    <!-- ── RIGHT SIDE: Photo + floating elements ── -->
+    <div class="hero-visual">
+
+      <!-- Photo frame with glowing rings -->
+      <div class="photo-frame">
+        <div class="ring ring-a"></div>
+        <div class="ring ring-b"></div>
+        <img
+          src="images/profile.jpg"
+          alt="Aditya Srinidhi Gariganti"
+          class="hero-photo"
+          onerror="this.src='https://placehold.co/400x400/1a1a2e/00d4ff?text=Your+Photo'"
+        />
+        <!--
+          ✏️ CHANGE YOUR PHOTO:
+          1. Take any photo of yourself
+          2. Rename it: profile.jpg
+          3. Put it inside the images/ folder
+          The onerror shows a placeholder if image is missing
+        -->
+      </div>
+
+      <!-- Floating tool badges (appear around photo) -->
+      <div class="tool-badge badge-1"><i class="fas fa-database"></i> SQL</div>
+      <div class="tool-badge badge-2"><fab fa-python"></i><i class="fab fa-python"></i> Python</div>
+      <div class="tool-badge badge-3"><i class="fas fa-chart-bar"></i> Power BI</div>
+      <div class="tool-badge badge-4"><i class="fas fa-magnifying-glass-chart"></i> Insights</div>
+      <!--
+        ✏️ CHANGE TOOL BADGES:
+        Change the text (SQL / Python / Tableau / Looker) to your tools
+        Find more icons at: fontawesome.com/icons
+      -->
+
+    </div>
+
+  </div>
+
+  <!-- Side social links (left edge) -->
+  <div class="hero-socials">
+    <a href="https://www.linkedin.com/in/aditya-gariganti/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/AdityaGariganti" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    
+    <!--
+      ✏️ CHANGE SOCIAL LINKS:
+      Replace each # with your actual URL
+      e.g. href="https://linkedin.com/in/yourname"
+      Add/remove <a> tags as needed
+    -->
+    <div class="social-bar"></div>
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 3 — ABOUT ME
+     ║
+     ║  HOW TO EDIT:
+     ║  1. Heading          → change "About Me"
+     ║  2. Photo            → same profile.jpg used again
+     ║  3. Role chip        → change "Data Analyst" label
+     ║  4. Story paragraphs → replace with YOUR story
+     ║  5. Info rows        → change Location / Education / Email / Status
+     ║  6. Button           → change "Get In Touch" text or link
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="section-container">
+
+    <div class="section-label reveal">
+      <span class="s-tag">Who I Am</span>
+      <h2 class="s-title">About <em>Me</em></h2>
+      <!-- ✏️ CHANGE: "About Me" heading -->
+    </div>
+
+    <div class="about-layout">
+
+      <!-- Left: photo -->
+      <div class="about-photo reveal">
+        <img src="images/profile.jpg" alt="About photo"
+          onerror="this.src='https://placehold.co/450x500/1a1a2e/00d4ff?text=Your+Photo'" />
+        <div class="about-chip">
+          <i class="fas fa-chart-line"></i>
+          <span>Data Analyst</span>
+          <!-- ✏️ CHANGE: your role/title label on the photo chip -->
+        </div>
+      </div>
+
+      <!-- Right: text -->
+      <div class="about-content reveal">
+
+        <h3 class="about-sub">
+          Turning Raw Data Into Business Decisions
+          <!-- ✏️ CHANGE: your catchy subtitle -->
+        </h3>
+
+        <p>
+          I'm <strong>Aditya Gariganti</strong>, a Data Analyst with hands-on
+          experience building KPI dashboards, pricing models, and inventory
+          forecasting systems that drive real business impact — turning raw
+          data into decisions that improve profitability and operational efficiency.
+          <!-- ✏️ CHANGE: write your own story — who you are, what you do -->
+        </p>
+
+        <p>
+          With strong expertise in SQL, Python, Excel, and Power BI, I bridge
+          the gap between raw data and meaningful storytelling — making
+          complexity feel simple for business stakeholders across any industry.
+          <!-- ✏️ CHANGE: your tools and approach -->
+        </p>
+
+        <!-- Personal info rows -->
+        <div class="info-grid">
+
+          <div class="info-item reveal">
+            <i class="fas fa-location-dot"></i>
+            <div>
+              <span class="i-key">Location</span>
+              <span class="i-val">Hyderabad, India</span>
+              <!-- ✏️ CHANGE: your city/country -->
+            </div>
+          </div>
+
+          <div class="info-item reveal">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <span class="i-key">Education</span>
+              <span class="i-val">B.Tech-EEE</span>
+              <!-- ✏️ CHANGE: your degree and major -->
+            </div>
+          </div>
+
+          <div class="info-item reveal">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="i-key">Email</span>
+              <span class="i-val">adityagariganti2002@gmail.com</span>
+              <!-- ✏️ CHANGE: your email address -->
+            </div>
+          </div>
+
+          <div class="info-item reveal">
+            <i class="fas fa-circle-check"></i>
+            <div>
+              <span class="i-key">Status</span>
+              <span class="i-val i-open">Open to Work ✓</span>
+              <!-- ✏️ CHANGE: "Open to Work" / "Employed" / "Freelancing" etc. -->
+            </div>
+          </div>
+
+        </div>
+
+        <a href="#contact" class="btn btn-primary">
+          Get In Touch
+          <!-- ✏️ CHANGE button text -->
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="experience" id="experience">
+  <div class="section-container">
+
+    <div class="section-label reveal">
+      <span class="s-tag">Work History</span>
+      <h2 class="s-title">My <em>Experience</em></h2>
+    </div>
+
+    <div class="experience-grid reveal">
+      <article class="exp-card">
+        <div class="exp-head">
+          <span class="exp-role">Data Analyst</span>
+          <span class="exp-company">Palkstreet</span>
+          <span class="exp-period">Dec 2024 – Present</span>
+        </div>
+        <ul class="exp-list">
+          <li>Designed and automated a centralized KPI reporting system in collaboration with leadership to define and track core
+              business metrics, using Python for backend processing and Power BI for visualization, reducing 15+ hours of manual
+              reporting weekly..</li>
+          <li>Executed weekly sell-through and inventory analysis for top ASINs using advanced Excel models to improve replenishment
+              accuracy, maintaining 93%+ stock availability and driving a 13–16% monthly sales increase.</li>
+          <li>Reduced Return-to-Order (RTO) rate from 16.2% to 11.5% by collaborating with Catalog and Operations teams to bridge
+              product expectation gaps. Leveraged SQL and Power BI to identify root causes, resulting in 10L+ annual cost savings and
+              improved order quality by 29%</li>
+          <!--li>Improved data quality by validating ETL pipelines and tracking metric accuracy.</li-->
+        </ul>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 4 — SKILLS
+     ║
+     ║  HOW TO EDIT:
+     ║  GROUP 1 & 2 (skill bars):
+     ║    - Change <span> text = skill name
+     ║    - Change data-w="90" = percentage fill (0–100)
+     ║    - Copy a .skill-row block to ADD a skill
+     ║    - Delete a .skill-row block to REMOVE a skill
+     ║
+     ║  GROUP 3 (badges):
+     ║    - Change text inside each .badge span
+     ║    - Copy/delete .badge spans to add/remove
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="skills" id="skills">
+  <div class="section-container">
+
+    <div class="section-label reveal">
+      <span class="s-tag">What I Use</span>
+      <h2 class="s-title">My <em>Skills</em></h2>
+    </div>
+
+    <div class="skills-layout">
+
+      <!-- ── SKILL GROUP 1: Query & Programming ── -->
+      <div class="skill-block reveal">
+  <div class="sb-header">
+    <i class="fas fa-code"></i>
+    <h3>Query & Programming</h3>
+  </div>
+
+  <div class="badges-wrap">
+    <span class="badge"><i class="fab fa-python"></i> Python</span>
+    <span class="badge"><i class="fas fa-database"></i> SQL</span>
+    <span class="badge"><i class="fas fa-table-cells"></i> Pandas</span>
+    <span class="badge"><i class="fas fa-square-root-variable"></i> NumPy</span>
+    <span class="badge"><i class="fas fa-chart-area"></i> Matplotlib</span>
+    <span class="badge"><i class="fas fa-wave-square"></i> Seaborn</span>
+    <span class="badge"><i class="fas fa-server"></i> MySQL</span>
+    <span class="badge"><i class="fab fa-github"></i> GitHub</span>
+  </div>
+</div>
+
+      <!-- ── SKILL GROUP 2: Visualization & BI Tools ── -->
+      <div class="skill-block reveal">
+  <div class="sb-header">
+    <i class="fas fa-chart-pie"></i>
+    <h3>Visualization & BI</h3>
+  </div>
+
+  <div class="badges-wrap">
+    <span class="badge"><i class="fas fa-chart-column"></i> Power BI</span>
+    <span class="badge"><i class="fas fa-file-excel"></i> Excel</span>
+    <span class="badge"><i class="fas fa-bolt"></i> Power Query</span>
+    <span class="badge"><i class="fas fa-table"></i> Pivot Tables</span>
+    <span class="badge"><i class="fab fa-google"></i> Google Sheets</span>
+    <span class="badge"><i class="fas fa-gauge-high"></i> KPI Dashboards</span>
+    <span class="badge"><i class="fas fa-rotate"></i> Reporting Automation</span>
+  </div>
+</div>
+
+      <!-- ── SKILL GROUP 3: Core Expertise Badges ── -->
+      <div class="skill-block reveal">
+        <div class="sb-header">
+          <i class="fas fa-brain"></i>
+          <h3>Core Expertise</h3>
+          <!-- ✏️ CHANGE: category title -->
+        </div>
+
+        <div class="badges-wrap">
+          <!-- ✏️ CHANGE each badge text. Copy to add. Delete to remove. -->
+          <span class="badge"><i class="fas fa-magnifying-glass-chart"></i> Exploratory Data Analysis</span>
+          <span class="badge"><i class="fas fa-chart-line"></i> KPI Frameworks</span>
+          <span class="badge"><i class="fas fa-broom"></i> Data Cleaning & Wrangling</span>
+          <span class="badge"><i class="fas fa-tachometer-alt"></i> Dashboard Development</span>
+          <span class="badge"><i class="fas fa-robot"></i> Predictive Modeling</span>
+          <span class="badge"><i class="fas fa-vials"></i> A/B Testing</span>
+          <span class="badge"><i class="fas fa-coins"></i> Statistical Analysis</span>
+          <span class="badge"><i class="fas fa-table"></i> Data Modeling</span>
+          <span class="badge"><i class="fas fa-eye"></i> Business Intelligence</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 5 — PROJECTS
+     ║
+     ║  HOW TO EDIT:
+     ║  FILTER BUTTONS:
+     ║    - Change button text (All / Analysis / Visualization etc.)
+     ║    - data-filter value must MATCH the project-card's data-cat value
+     ║
+     ║  EACH PROJECT CARD:
+     ║    - data-cat="analysis"   → must match a filter button's data-filter
+     ║    - img src               → add screenshot to images/ folder
+     ║    - .p-cat span           → short category label on card
+     ║    - .p-year span          → year
+     ║    - h3                    → project title
+     ║    - p                     → project description
+     ║    - .p-tags spans         → technology tags
+     ║    - overlay links         → replace # with live URL and GitHub URL
+     ║
+     ║  ADD A PROJECT: Copy a full <article class="proj-card"> block
+     ║  REMOVE A PROJECT: Delete a full <article class="proj-card"> block
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="projects" id="projects">
+  <div class="section-container">
+
+    <div class="section-label reveal">
+      <span class="s-tag">My Work</span>
+      <h2 class="s-title">Featured <em>Projects</em></h2>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="filter-row reveal">
+      <button class="f-btn active" data-filter="all">All</button>
+      <button class="f-btn" data-filter="retail analysis">Retail Analysis</button>
+      <button class="f-btn" data-filter="hr analysis">HR Analysis</button>
+      <button class="f-btn" data-filter="sports analysis">Sports Analysis</button>
+      
+      <!-- ✏️ CHANGE: filter button labels and data-filter values -->
+    </div>
+
+    <!-- Projects grid -->
+    <div class="proj-grid" id="projGrid">
+
+      <!-- ══ PROJECT CARD 1 ══ -->
+      <article class="proj-card reveal" data-cat="Retail Analysis">
+        <!--
+          ✏️ data-cat: space-separated categories
+          This card shows under "All", "Retail Analysis", and "Analysis" filters
+        -->
+        <div class="p-img">
+          <img src="images/project1.jpg" alt="Credit Risk Dashboard"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+1'" />
+          <!--
+            ✏️ CHANGE IMAGE:
+            1. Take a screenshot of your project / dashboard
+            2. Name it project1.jpg
+            3. Put it in the images/ folder
+          -->
+          <div class="p-overlay">
+            <!--a href="#" target="_blank" class="p-link">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a-->
+            <a href="https://github.com/AdityaGariganti/Retailorders-Python-SQL-Project" target="_blank" class="p-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <!--
+              ✏️ CHANGE LINKS:
+              Replace # with your actual live demo URL and GitHub URL
+            -->
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">Retail Analysis</span>
+            <!-- ✏️ CHANGE: short category label shown on card -->
+            <span class="p-year">2024</span>
+            <!-- ✏️ CHANGE: year -->
+          </div>
+          <h3>Retail ETL Analytics</h3>
+          <!-- ✏️ CHANGE: project title -->
+          <p>
+            Built a Python, Pandas, MySQL ETL pipeline analyzing 9,994 orders; uncovered $8.7M revenue, 28% margin, and 4.9% YoY sales decline.
+          </p>
+          <!-- ✏️ CHANGE: your project description -->
+          <div class="p-tags">
+            <span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span>
+            <!-- ✏️ CHANGE: technology tags you used -->
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PROJECT CARD 2 ══ -->
+      <article class="proj-card reveal" data-cat="HR Analysis">
+        <div class="p-img">
+          <img src="images/project2.jpg" alt="Loan Default Prediction"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+2'" />
+          <div class="p-overlay">
+            <!--a href="#" target="_blank" class="p-link"><i class="fas fa-external-link-alt"></i> Live Demo</a-->
+            <a href="https://github.com/AdityaGariganti/HR-Data-Analysis-Power-BI-Project/tree/main" target="_blank" class="p-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">HR Analysis</span>
+            <span class="p-year">2024</span>
+          </div>
+          <h3>HR Analytics Dashboard</h3>
+          <p>
+            Built a Power BI HR dashboard analyzing FY22–23 attendance; tracked 90%+ presence, peak WFH on Mon/Fri, and seasonal sick leave trends.
+          </p>
+          <div class="p-tags">
+            <span>Power BI</span><span>DAX</span><span>Excel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PROJECT CARD 3 ══ -->
+      <article class="proj-card reveal" data-cat="Sports Analysis">
+        <div class="p-img">
+          <img src="images/project3.jpg" alt="Transaction Monitoring"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+3'" />
+          <div class="p-overlay">
+            <!--a href="#" target="_blank" class="p-link"><i class="fas fa-external-link-alt"></i> Live Demo</a-->
+            <a href="https://github.com/AdityaGariganti/AdityaGariganti-T20_worldcup_Dataanalysis_project/blob/main/README.md" target="_blank" class="p-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">Sports Analysis</span>
+            <span class="p-year">2024</span>
+          </div>
+          <h3>T20 Analytics Dashboard</h3>
+          <p>
+            Analyzed ICC T20 WC 2022 using Python & Power BI on 45 matches, 16 teams, 1000+ batting & 500+ bowling records to build Best XI insights.
+          </p>
+          <div class="p-tags">
+            <span>Python</span><span>Power BI</span><span>Excel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PROJECT CARD 4 ══ -->
+      <!--article class="proj-card reveal" data-cat="analysis visualization">
+        <div class="p-img">
+          <img src="images/project4.jpg" alt="Customer Segmentation"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+4'" />
+          <div class="p-overlay">
+            <a href="#" target="_blank" class="p-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" target="_blank" class="p-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">Analysis · Visualization</span>
+            <span class="p-year">2023</span>
+          </div>
+          <h3>Bank Customer Segmentation</h3>
+          <p>
+            Segmented 100,000+ bank customers using RFM analysis and
+            K-Means clustering to enable targeted product offerings,
+            increasing cross-sell rate by 18%.
+          </p>
+          <div class="p-tags">
+            <span>Python</span><span>Pandas</span><span>Tableau</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PROJECT CARD 5 ══ -->
+      <!--article class="proj-card reveal" data-cat="ml banking">
+        <div class="p-img">
+          <img src="images/project5.jpg" alt="Fraud Detection"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+5'" />
+          <div class="p-overlay">
+            <a href="#" target="_blank" class="p-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" target="_blank" class="p-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">ML · Banking</span>
+            <span class="p-year">2023</span>
+          </div>
+          <h3>Fraud Detection System</h3>
+          <p>
+            Built an anomaly detection pipeline using Isolation Forest
+            to flag suspicious transactions, reducing false positives
+            by 35% compared to rule-based systems.
+          </p>
+          <div class="p-tags">
+            <span>Python</span><span>SQL</span><span>Scikit-learn</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PROJECT CARD 6 ══ -->
+      <!--article class="proj-card reveal" data-cat="visualization analysis">
+        <div class="p-img">
+          <img src="images/project6.jpg" alt="KPI Dashboard"
+            onerror="this.src='https://placehold.co/600x380/1a1a2e/00d4ff?text=Project+6'" />
+          <div class="p-overlay">
+            <a href="#" target="_blank" class="p-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" target="_blank" class="p-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta">
+            <span class="p-cat">Visualization</span>
+            <span class="p-year">2022</span>
+          </div>
+          <h3>Executive KPI Dashboard</h3>
+          <p>
+            Designed an executive-level KPI dashboard consolidating
+            data from 5 source systems into a single Tableau view
+            used by C-suite leadership weekly.
+          </p>
+          <div class="p-tags">
+            <span>Tableau</span><span>SQL</span><span>Excel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ✏️ TO ADD MORE PROJECTS:
+           Copy an entire <article class="proj-card ..."> block above
+           Paste it here and edit the content inside -->
+
+    </div><!-- end proj-grid -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  SECTION 6 — CONTACT
+     ║
+     ║  HOW TO EDIT:
+     ║  1. Intro paragraph     → change the message
+     ║  2. Email / Phone / City → find and replace below
+     ║  3. Social links        → replace # with your real URLs
+     ║  4. Form action URL     → set up Formspree (instructions below)
+     ║
+     ║  HOW TO SET UP FORMSPREE (FREE — so form emails work):
+     ║  Step 1: Go to formspree.io
+     ║  Step 2: Sign up for free
+     ║  Step 3: Click "New Form" → give it a name
+     ║  Step 4: They give you a URL like: https://formspree.io/f/abcdef12
+     ║  Step 5: Replace YOUR_FORM_ID in the action="" below with
+     ║           that ID (the letters after /f/  e.g. abcdef12)
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="section-container">
+
+    <div class="section-label reveal">
+      <span class="s-tag">Get In Touch</span>
+      <h2 class="s-title">Contact <em>Me</em></h2>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Left: info -->
+      <div class="c-left reveal">
+
+        <p class="c-intro">
+          Have a dataset that needs to make sense? Looking for an analyst
+          who turns messy data into clear decisions? I'd love to connect
+          — let's talk!
+          <!-- ✏️ CHANGE: your own intro message -->
+        </p>
+
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <span class="c-key">Email</span>
+            <span class="c-val">adityagariganti2002@gmail.com</span>
+            <!-- ✏️ CHANGE: your email -->
+          </div>
+        </div>
+
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <span class="c-key">Phone / WhatsApp</span>
+            <span class="c-val">+91 8892126666</span>
+            <!-- ✏️ CHANGE: your phone number -->
+          </div>
+        </div>
+
+        <div class="c-detail">
+          <div class="c-icon"><i class="fas fa-location-dot"></i></div>
+          <div>
+            <span class="c-key">Location</span>
+            <span class="c-val">Hyderabad, India</span>
+            <!-- ✏️ CHANGE: your city and country -->
+          </div>
+        </div>
+
+        <!-- Social icons -->
+        <div class="c-socials">
+          <!-- ✏️ Replace # with your real profile URLs -->
+          <a href="https://www.linkedin.com/in/aditya-gariganti/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/AdityaGariganti" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right: form -->
+      <div class="c-right reveal">
+        <!--
+          ✏️ CHANGE YOUR_FORM_ID:
+          Go to formspree.io → create free account → new form
+          Copy the ID from the URL they give and replace YOUR_FORM_ID
+        -->
+        <form id="contactForm" action="https://formspree.io/f/xaqvrnng" method="POST">
+
+          <div class="form-pair">
+            <div class="f-field">
+              <label for="fname">Full Name</label>
+              <input id="fname" type="text" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="f-field">
+              <label for="femail">Email Address</label>
+              <input id="femail" type="email" name="email" placeholder="john@email.com" required />
+            </div>
+          </div>
+
+          <div class="f-field">
+            <label for="fsubject">Subject</label>
+            <input id="fsubject" type="text" name="subject" placeholder="Job opportunity / Collaboration" required />
+          </div>
+
+          <div class="f-field">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" name="message" rows="6"
+              placeholder="Tell me about your data challenge or opportunity..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-wide" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ║  FOOTER
+     ║
+     ║  HOW TO EDIT:
+     ║  1. Logo initials  → change "MGN"
+     ║  2. Tagline        → change the text under the logo
+     ║  3. Footer name    → change "Muhammad Gardian Novandri"
+     ═══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="f-left">
+      <span class="f-logo">ASG<span>.</span></span>
+      <!-- ✏️ CHANGE: your initials -->
+      <p>Turning data into business decisions.</p>
+      <!-- ✏️ CHANGE: your tagline -->
+    </div>
+
+    <div class="f-right">
+      <p>Built by <strong>Aditya Srinidhi Gariganti</strong></p>
+      <!-- ✏️ CHANGE: your name -->
+      <p class="f-copy">© <span id="footerYear"></span> · All Rights Reserved</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
